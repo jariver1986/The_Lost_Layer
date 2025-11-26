@@ -2,6 +2,14 @@
 
 <img width="1024" height="1024" alt="Logo" src="https://github.com/user-attachments/assets/7da867dd-ca76-4bde-912a-f652994f3fbf" />
 
+https://convertio.co/es/mp3-wav/
+
+https://melody.ml/
+
+https://ytube.savetube.me/es/13-youtube-shorts-to-mp3-converter-5luna2#google_vignette
+
+
+
 
 The Lost Layer Audio Controller es un proyecto escrito en Python que permite reproducir, detener y controlar el volumen de pistas de audio en tiempo real utilizando únicamente el teclado de la computadora.
 
