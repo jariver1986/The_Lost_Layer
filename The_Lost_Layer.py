@@ -8,7 +8,7 @@ import os
 # -----------------------------------------
 pygame.mixer.init()
 
-# Ruta del archivo BASS
+# Ruta del archivo VOCALS (ya en WAV)
 audio_path = r"C:\Users\Usuario\Music\The_lost_layer_v20\The_lost_layer_v2.0-vocals.wav"
 
 if not os.path.exists(audio_path):
@@ -24,26 +24,27 @@ pygame.mixer.music.set_volume(volume)
 
 print("🎧 Control de Audio – The Lost Layer")
 print("------------------------------------")
-print(" Q → Reproducir BASS")
+print(" Q → Reproducir VOCALS")
 print(" W → Stop")
 print(" A → Subir volumen")
 print(" S → Bajar volumen")
-print(" Z → Retroceder 50 ms")
+print(" Z → Retroceder 10 ms")
 print(" CTRL + C → Salir\n")
+
+# -----------------------------------------
+# BANDERA PARA CONTROLAR LA TECLA Z
+# -----------------------------------------
+last_z_state = False
 
 # -----------------------------------------
 # LOOP PRINCIPAL
 # -----------------------------------------
-
-last_z_state = False
-
-
 while True:
 
     # Q = PLAY
     if keyboard.is_pressed("q"):
         pygame.mixer.music.play()
-        print("▶ Reproduciendo BASS...")
+        print("▶ Reproduciendo VOCALS...")
         time.sleep(0.2)
 
     # W = STOP
@@ -66,19 +67,20 @@ while True:
         print(f"🔉 Volumen: {round(volume, 2)}")
         time.sleep(0.1)
 
-        # Z = RETROCEDER 50 ms (solo una vez por toque)
+    # -----------------------------------------
+    # Z = RETROCEDER 10 ms (SOLO UNA VEZ POR TOQUE)
+    # -----------------------------------------
     z_pressed = keyboard.is_pressed("z")
 
     if z_pressed and not last_z_state:
         pos_ms = pygame.mixer.music.get_pos()
         if pos_ms != -1:
             current_pos = pos_ms / 1000.0
-            new_pos = max(0, current_pos - 0.01)
+            new_pos = max(0, current_pos - 0.10)  # 10 ms
             pygame.mixer.music.play(start=new_pos)
             print(f"⏪ Retroceder a {round(new_pos, 3)} s")
         time.sleep(0.05)
 
     last_z_state = z_pressed
-
 
     time.sleep(0.01)
