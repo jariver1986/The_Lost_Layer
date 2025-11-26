@@ -1,5 +1,8 @@
 📝 Descripción para GitHub — “The Lost Layer Audio Controller (Python)”
 
+<img width="1024" height="1024" alt="Logo" src="https://github.com/user-attachments/assets/7da867dd-ca76-4bde-912a-f652994f3fbf" />
+
+
 The Lost Layer Audio Controller es un proyecto escrito en Python que permite reproducir, detener y controlar el volumen de pistas de audio en tiempo real utilizando únicamente el teclado de la computadora.
 
 Es una herramienta diseñada para productores musicales, DJs experimentales y desarrolladores que desean crear una interfaz personalizada para disparar stems (bass, drums, vocals, etc.) sin depender de un software DJ tradicional.
