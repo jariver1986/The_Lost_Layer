@@ -16,6 +16,9 @@ Descargar de youtube a mp3
 
 https://ytmp3.ai/
 
+Correr demucs en windows + terminal de cmd
+
+python -m demucs -n mdx_extra_q --mp3 "cuerdas_de_amor.mp3"
 
 
 
